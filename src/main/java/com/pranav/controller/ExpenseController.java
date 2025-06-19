@@ -28,6 +28,14 @@ public class ExpenseController {
     }
 
 
+	@GetMapping("expenses")
+	public ResponseEntity<List<Expense>> getAllExpenses(Authentication authentication){
+		String username = authentication.getName();
+		AppUser user = userService.findByUsername(username);
+		List<Expense> expenses = expenseService.getAllUserExpenses(user.getId());
+		return ResponseEntity.ok(expenses);
+	}
+
     @GetMapping("expenses/day/{date}")
 	public ResponseEntity<List<Expense>> getExpensesByDay(@PathVariable("date") String date,
 														  Authentication authentication){
