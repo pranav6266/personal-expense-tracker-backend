@@ -5,10 +5,10 @@ spring:
   profiles:
     active: postgres-db
   datasource:
-    url: jdbc:postgresql://ep-muddy-snow-a1se2sp4-pooler.ap-southeast-1.aws.neon.tech/expensedb?sslmode=require
+    url: ${DB_URL}
     driver-class-name: org.postgresql.Driver # The JDBC driver for H2
-    username: neondb_owner
-    password: npg_j1EbdVfr7tLX
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
 
   h2:
     console:

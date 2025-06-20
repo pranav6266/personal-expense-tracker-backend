@@ -12,6 +12,8 @@ repositories {
 }
 
 dependencies {
+//    dotenv for password
+    implementation ("me.paulschwarz:spring-dotenv:3.0.0")
     //Lombok Setup
     compileOnly 'org.projectlombok:lombok:1.18.34'
     annotationProcessor 'org.projectlombok:lombok:1.18.34'

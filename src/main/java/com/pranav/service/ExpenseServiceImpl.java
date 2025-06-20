@@ -3,14 +3,12 @@ package com.pranav.service;
 import com.pranav.model.AppUser;
 import com.pranav.model.Expense;
 import com.pranav.repository.ExpenseRepository;
-import com.pranav.utils.ExpenseDataLoader;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.concurrent.atomic.AtomicLong;
 
 @Service
 @Profile("postgres-db")
